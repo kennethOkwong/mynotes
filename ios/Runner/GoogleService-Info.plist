@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>20267424963-u2hj51o6379irc1hclghil178gpl8kch.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.20267424963-u2hj51o6379irc1hclghil178gpl8kch</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>20267424963-1r15o8d0fsnosa5lrgl940n48g7uh78e.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBRFK9UMMCSEbYO59lUhaFJeL_gFNWv10M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>20267424963</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.cadenny.mynotes</string>
+	<key>PROJECT_ID</key>
+	<string>petro-stations-1537615849745</string>
+	<key>STORAGE_BUCKET</key>
+	<string>petro-stations-1537615849745.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:20267424963:ios:f70c5def1d50f4391c5676</string>
+	<key>DATABASE_URL</key>
+	<string>https://petro-stations-1537615849745.firebaseio.com</string>
+</dict>
+</plist>
