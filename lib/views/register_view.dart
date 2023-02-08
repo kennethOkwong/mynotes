@@ -1,8 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'dart:developer' as dev_tools show log;
-
 import 'package:mynotes/constants/routes.dart';
+import 'package:mynotes/services/auth/auth_exceptions.dart';
+import 'package:mynotes/services/auth/auth_service.dart';
+import 'package:mynotes/utilities/show_alert_dialog.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});
@@ -54,14 +54,15 @@ class _RegisterViewState extends State<RegisterView> {
                       try{
                         final email = _email.text;
                         final password = _password.text;
-                        await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);
-                      }on FirebaseAuthException catch(e){
-                        if(e.code == "unknown"){
-                          dev_tools.log("All fields are required");
-                        }else{
-                          dev_tools.log(e.code);
-                        }
+                        await AuthService.firebase().createAccount(email: email, password: password);
+                        await AuthService.firebase().sendEmailVerification();
+                          Navigator.of(context).pushNamed(verifyEmailRoute);
+                      }on IncompleteInputsAuthException{
+                        showErrorDialog(context, "All fields are required");
+                      }on GenericAuthException{
+                        showErrorDialog(context, "Authentication error");
                       }
+                      
                     },
                     child: const Text("Register"),
                   ),
